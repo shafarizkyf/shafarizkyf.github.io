@@ -120,3 +120,23 @@ section .line {
   font-size: 12px;
   font-style: italic;
 }
+
+
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 992px) {
+
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 576px) {
+  header {
+    align-items: flex-start;
+  }
+  section {
+    max-width: 300px;
+    margin-left: 0px;
+  }
+}
