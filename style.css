@@ -167,8 +167,17 @@ section .line {
   header {
     align-items: flex-start;
   }
+
   section {
     max-width: 300px;
     margin-left: 0px;
+  }
+
+  h3 > .subtitle {
+    display: block;
+  }
+
+  .tooltip {
+    left: unset;
   }
 }

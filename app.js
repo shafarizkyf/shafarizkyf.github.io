@@ -30,6 +30,8 @@ async function showPreview(event, link) {
   const url = link.href;
   const data = await fetchPreviewData(url);
   const tooltip = document.getElementById("tooltip");
+  const { clientWidth } = document.body;
+  const mobileBreakPoint = 576;
 
   if (data && data.title) {
     tooltip.innerHTML = `
@@ -41,9 +43,15 @@ async function showPreview(event, link) {
         </div>
       </div>
     `;
+
     tooltip.style.display = "block";
-    tooltip.style.left = event.pageX + "px";
-    tooltip.style.top = event.pageY + "px";
+
+    if (clientWidth > mobileBreakPoint) {
+      tooltip.style.left = event.pageX + "px";
+      tooltip.style.top = event.pageY + "px";
+    } else {
+      tooltip.style.top = (event.pageY + 20) + "px";
+    }
   }
 }
 
