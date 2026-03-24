@@ -3,7 +3,7 @@ html {
 }
 
 section {
-  width: 1000px;
+  width: 800px;
   margin: 40px auto;
 }
 
@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, p {
   margin: 0;
 }
 
-ul {
+ul, ol {
   margin: 0;
   padding: 0;
   position: relative;
@@ -50,15 +50,33 @@ h3 > a {
   text-decoration: none;
 }
 
-h3 > .subtitle {
+h3 > .subtitle,
+h2 > .subtitle {
   font-size: 12px;
   font-weight: 400;
+  text-transform: none;
+}
+
+h3.summary {
+  margin-bottom: 2rem;
+  font-weight: normal;
+  font-size: 14px;
 }
 
 section .line {
   height: 2px;
   background-color: #000;
   margin-bottom: 20px;
+}
+
+table {
+  font-size: 14px;
+  margin-bottom: 2rem;
+}
+
+td.label {
+  width: 40%;
+  font-size: 12px;
 }
 
 .fz-12 {
@@ -78,10 +96,11 @@ section .line {
 }
 
 .mb-10 {
-  margin-bottom: 10px;
+  margin-bottom: 10px !important;
 }
 
-.experience ul {
+.experience ul,
+.experience ol {
   margin-left: 20px;
 }
 
@@ -173,7 +192,8 @@ section .line {
     margin-left: 0px;
   }
 
-  h3 > .subtitle {
+  h3 > .subtitle,
+  h2 > .subtitle {
     display: block;
   }
 
