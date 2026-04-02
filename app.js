@@ -68,4 +68,26 @@ document.addEventListener('DOMContentLoaded', function(){
       tooltip.style.display = "none";
     });
   });
+
+  const alert = document.getElementById('videoAlert');
+  const modal = document.getElementById('videoModal');
+  const modalClose = document.getElementById('modalClose');
+  const iframe = document.getElementById('youtubeFrame');
+
+  alert.addEventListener('click', function() {
+    modal.style.display = 'block';
+    iframe.src = 'https://www.youtube.com/embed/PEiKsKbUHuo?autoplay=1';
+  });
+
+  modalClose.addEventListener('click', function() {
+    modal.style.display = 'none';
+    iframe.src = '';
+  });
+
+  window.addEventListener('click', function(event) {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+      iframe.src = '';
+    }
+  });
 });
