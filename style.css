@@ -259,6 +259,13 @@ td.label {
   gap: 6px;
 }
 
+.project-experiences li {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 10pt;
+  list-style: disc;
+}
+
 @media (max-width: 1200px) {
 
 }
