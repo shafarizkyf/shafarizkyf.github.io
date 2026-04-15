@@ -282,7 +282,6 @@ td.label {
 
   section {
     max-width: calc(100% - 5px);
-    margin-left: 0px;
   }
 
   h3 > .subtitle,
